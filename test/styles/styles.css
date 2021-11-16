@@ -1,0 +1,33 @@
+body {
+    background-color:aquamarine;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    margin: 10px; 
+}
+
+#rezult {
+    padding: 40px; 
+    font-weight: bold;
+}
+

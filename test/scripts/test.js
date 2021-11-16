@@ -1,37 +1,40 @@
-function makeBuffer(){
-    let str = "";
-    return {
-        add: string => {
-            str += string;
-        }, 
-    
-        print: () => {
-            return str;
-        },
-        
-        clear: () => {
-            str = "";
-        }
-    }
+const buttonPlus = document.querySelector(`.plus`);
+const buttonSubtr = document.querySelector(`.subtr`);
+const buttonMulti = document.querySelector(`.multi`);
+const buttonDivis = document.querySelector(`.divis`);
+let rezultHTML = document.getElementById(`rezult`);
+
+let rezult = 0;
+let a = 0;
+let b = 0;
+
+
+function sum () {
+    a = document.getElementById('a').value
+    b = document.getElementById('b').value
+    rezult = Number(a) + Number(b); 
+    rezultHTML.innerHTML = `Rezult : ${Number(rezult)}`;
+}
+function substr () {
+    a = document.getElementById('a').value
+    b = document.getElementById('b').value
+    rezult = a - b;
+    rezultHTML.innerHTML = `Rezult : ${Number(rezult)}`;
+}
+function multi () {
+    a = document.getElementById('a').value
+    b = document.getElementById('b').value
+    rezult = a * b;
+    rezultHTML.innerHTML = `Rezult : ${Number(rezult)}`;
+}
+function divis () {
+    a = document.getElementById('a').value
+    b = document.getElementById('b').value
+    rezult = a / b;
+    rezultHTML.innerHTML = `Rezult : ${Number(rezult)}`;
 }
 
-
-var buffer = makeBuffer();
-buffer.add('JavaScript');
-buffer.add(' Вчити');
-buffer.add(' Потрібно!');
-console.log(buffer.print());
-
-var buffer2 = makeBuffer();
-buffer2.add(0);
-buffer2.add(1);
-buffer2.add(0);
-console.log(buffer2.print());
-
-var buffer3 = makeBuffer ();
-buffer3.add("Тест");
-buffer3.add(" тебе не з'їсть");
-console.log(buffer3.print());
-buffer3.clear ();
-console.log(buffer3.print());
-
+buttonPlus.addEventListener("click", sum);
+buttonSubtr.addEventListener("click", substr);
+buttonMulti.addEventListener("click", multi);
+buttonDivis.addEventListener("click", divis);
